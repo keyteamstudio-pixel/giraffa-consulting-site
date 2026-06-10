@@ -285,3 +285,37 @@
     resize(); loop();
   }
 })();
+
+/* ---------- WOW hero: muro immagini + marquee + parallax ---------- */
+(function () {
+  var wall = document.getElementById("hero-wall");
+  if (!wall) return;
+  var imgs = ["/AADV_1.jpg","/Borssari%2025_08_230166.png","/GSP06490.jpg","/br-per01a.jpg","/GSP03070.jpg","/Borssari%2025_08_230147.png","/GSP03133.jpg","/cl-per01a.jpg"];
+  var cols = 4;
+  for (var c = 0; c < cols; c++) {
+    var col = document.createElement("div");
+    col.className = "col";
+    var set = [];
+    for (var i = c; i < imgs.length; i += cols) set.push(imgs[i]);
+    while (set.length < 2) set.push(imgs[(c + set.length) % imgs.length]);
+    var h = "";
+    for (var d = 0; d < 2; d++) { set.forEach(function (u) { h += '<figure><img src="' + u + '" alt="" loading="eager"></figure>'; }); }
+    col.innerHTML = h;
+    if (c % 2) col.style.marginTop = "-9%";
+    wall.appendChild(col);
+  }
+  var mq = document.getElementById("hero-mq");
+  if (mq) {
+    var w = ["Brand","✳","Comunicazione","✳","Marketing","✳","Digitale","✳","Eventi","✳","Foto & Video","✳"];
+    var s = "";
+    for (var k = 0; k < 2; k++) { w.forEach(function (x) { s += '<span class="' + (x === "✳" ? "x" : "") + '">' + x + "</span>"; }); }
+    mq.innerHTML = s;
+  }
+  var fine = window.matchMedia("(pointer:fine)").matches, reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (fine && !reduce) {
+    window.addEventListener("mousemove", function (e) {
+      var px = e.clientX / window.innerWidth - 0.5, py = e.clientY / window.innerHeight - 0.5;
+      wall.style.transform = "perspective(1400px) rotateY(" + (-20 + px * 4) + "deg) rotateZ(" + (7 - px * 2) + "deg) translateY(" + (py * -16) + "px) scale(1.25)";
+    }, { passive: true });
+  }
+})();

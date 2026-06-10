@@ -526,6 +526,35 @@ body.has-cursor a,body.has-cursor button{ cursor:none; }
 .gallery .g:hover img{ transform:scale(1.04); }
 .gallery .g .ph{ font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--txt-soft); opacity:.55; }
 
+/* =========================================================
+   WOW HERO — muro immagini 3D in movimento
+   ========================================================= */
+.hero{ align-items:center !important; }
+.hero::after{
+  background:linear-gradient(95deg,var(--paper) 14%,rgba(250,246,239,.88) 32%,rgba(250,246,239,.4) 56%,rgba(250,246,239,0) 80%) !important;
+}
+@media(max-width:760px){
+  .hero::after{ background:linear-gradient(180deg,rgba(250,246,239,.74),var(--paper) 58%) !important; }
+}
+.hero__bg{ position:absolute; inset:0; z-index:0; display:flex; justify-content:flex-end; gap:clamp(14px,1.6vw,26px);
+  transform:perspective(1400px) rotateY(-20deg) rotateZ(7deg) scale(1.25); transform-origin:75% 50%;
+  padding-right:2vw; will-change:transform; transition:transform .25s var(--ease-out); }
+.hero__bg .col{ display:flex; flex-direction:column; gap:clamp(14px,1.6vw,26px); width:clamp(168px,15vw,300px); flex:none; animation:rise linear infinite; will-change:transform; }
+.hero__bg .col:nth-child(1){ animation-duration:42s; }
+.hero__bg .col:nth-child(2){ animation-duration:54s; animation-direction:reverse; }
+.hero__bg .col:nth-child(3){ animation-duration:48s; }
+.hero__bg .col:nth-child(4){ animation-duration:60s; animation-direction:reverse; }
+.hero__bg figure{ margin:0; border-radius:14px; overflow:hidden; background:var(--sand); box-shadow:0 30px 60px -30px rgba(22,19,13,.5); }
+.hero__bg figure img{ width:100%; height:100%; object-fit:cover; aspect-ratio:4/5; }
+@keyframes rise{ from{ transform:translateY(0) } to{ transform:translateY(-50%) } }
+@media(max-width:760px){ .hero__bg{ opacity:.16; transform:perspective(1000px) rotateZ(4deg) scale(1.5); justify-content:center; } }
+.hero h1.display{ font-size:clamp(3rem,9.5vw,8rem); line-height:.97; max-width:15ch; }
+.hero__mq{ position:absolute; bottom:0; left:0; right:0; z-index:3; border-top:1px solid var(--line); background:rgba(250,246,239,.55); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); overflow:hidden; padding:13px 0; }
+.hero__mq .t{ display:flex; width:max-content; animation:tick 28s linear infinite; }
+.hero__mq:hover .t{ animation-play-state:paused; }
+.hero__mq .t span{ font-family:var(--ff-display); font-weight:400; font-size:clamp(1.05rem,2vw,1.55rem); letter-spacing:-.01em; padding:0 .55em; white-space:nowrap; color:var(--ink); }
+.hero__mq .t span.x{ color:var(--terra); }
+
 /* utility */
 .center{ text-align:center; }
 .mt-s{ margin-top:14px; } .mt-m{ margin-top:26px; } .mt-l{ margin-top:44px; }
