@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+<title>Portfolio — Progetti e storie dei nostri clienti | Giraffa Consulting</title>
+<meta name="description" content="Il nostro portfolio: ogni progetto è il racconto, passo dopo passo, di come abbiamo seguito il cliente. Brand, marketing, comunicazione e digitale a Verona." />
+<meta name="theme-color" content="#faf6ef" />
+<meta property="og:title" content="Portfolio | Giraffa Consulting" />
+<meta property="og:description" content="Ogni progetto è una storia: come abbiamo seguito i nostri clienti, passo dopo passo." />
+<meta property="og:image" content="https://giraffaconsulting.it/logo-color.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/app.css" />
+</head>
+<body>
+<div class="progress"></div>
+<div class="grain"></div>
+
+<header class="nav">
+  <a class="nav__logo" href="/" aria-label="Giraffa Consulting — Home"><img class="logo-img" src="/logo-horizontal.png" alt="Giraffa Consulting" /></a>
+  <nav class="nav__links">
+    <a href="/">Home</a>
+    <a href="/chi-siamo">Chi Siamo</a>
+    <a href="/servizi">Servizi</a>
+    <a href="/portfolio" class="active">Portfolio</a>
+    <a href="/contatti">Contatti</a>
+  </nav>
+  <a class="btn btn-primary nav__cta" href="/contatti">Prenota una call <span class="arr">→</span></a>
+  <button class="nav__burger" aria-label="Apri menu"><span></span><span></span><span></span></button>
+</header>
+<div class="mobile-menu">
+  <a href="/"><span class="n">01</span> Home</a>
+  <a href="/chi-siamo"><span class="n">02</span> Chi Siamo</a>
+  <a href="/servizi"><span class="n">03</span> Servizi</a>
+  <a href="/portfolio"><span class="n">04</span> Portfolio</a>
+  <a href="/contatti"><span class="n">05</span> Contatti</a>
+  <div class="mobile-menu__foot">
+    <a href="https://www.instagram.com/giraffa.consulting/">@giraffa.consulting</a>
+    <span>Via San Procolo 5, Verona</span>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="phero bg-ink">
+  <div class="wrap">
+    <p class="eyebrow reveal in">Portfolio</p>
+    <h1 class="reveal in" style="margin-top:18px">Ogni progetto è una storia.</h1>
+    <p class="lead reveal in">Non un elenco di loghi, ma il racconto di come abbiamo seguito ogni cliente — passo dopo passo, dall'ascolto alla realizzazione. Apri un progetto per leggerne il percorso e vederne i materiali.</p>
+  </div>
+</section>
+
+<!-- GRID -->
+<section class="section bg-ink" style="padding-top:clamp(20px,3vw,40px)">
+  <div class="wrap">
+    <div class="filters reveal">
+      <button class="chip active" data-filter="all">Tutti</button>
+      <button class="chip" data-filter="strategia">Strategia</button>
+      <button class="chip" data-filter="marketing">Marketing</button>
+      <button class="chip" data-filter="organizzazione">Organizzazione</button>
+      <button class="chip" data-filter="digitale">Digitale</button>
+    </div>
+
+    <div class="works">
+      <a class="work reveal" data-cat="marketing digitale" href="/acqua-adv">
+        <div class="work__media"><span class="work__badge">Beverage &amp; Eventi</span><span class="work__logo"><img src="https://giraffaconsulting.it/clients/acqua-adv.png" alt="Acqua ADV" /></span></div>
+        <div class="work__body">
+          <div class="work__meta"><span>Acqua ADV</span><span>Verona</span></div>
+          <h3>Un brand nato da zero, a 360°</h3>
+          <div class="work__tags"><span>Marketing</span><span>Digitale</span><span>Video</span></div>
+        </div>
+      </a>
+      <a class="work reveal d1" data-cat="strategia digitale" href="/iplus">
+        <div class="work__media"><span class="work__badge">ESG &amp; Editoriale</span><span class="work__ph">Supporto editoriale</span></div>
+        <div class="work__body">
+          <div class="work__meta"><span>IPLUS</span><span>Sostenibilità</span></div>
+          <h3>Grafica &amp; report ESG</h3>
+          <div class="work__tags"><span>Grafica</span><span>Editoriale</span></div>
+        </div>
+      </a>
+      <a class="work reveal d2" data-cat="strategia marketing" href="/borsari">
+        <div class="work__media"><span class="work__badge">Gioielleria</span><span class="work__logo"><img src="https://giraffaconsulting.it/clients/borsari.png" alt="Borsari Gioielli" /></span></div>
+        <div class="work__body">
+          <div class="work__meta"><span>Borsari Gioielli</span><span>Lusso</span></div>
+          <h3>Rebranding completo, dal sito alle fiere</h3>
+          <div class="work__tags"><span>Brand</span><span>Marketing</span><span>Video</span></div>
+        </div>
+      </a>
+      <a class="work reveal" data-cat="strategia digitale" href="/petit-blanche">
+        <div class="work__media"><span class="work__badge">Moda</span><span class="work__logo"><img src="https://giraffaconsulting.it/clients/petit-blanche.svg" alt="Petit Blanche" /></span></div>
+        <div class="work__body">
+          <div class="work__meta"><span>Petit Blanche</span><span>Retail</span></div>
+          <h3>Sito, marketing &amp; comunicazione</h3>
+          <div class="work__tags"><span>Digitale</span><span>Marketing</span></div>
+        </div>
+      </a>
+      <a class="work reveal d1" data-cat="strategia marketing" href="/miola">
+        <div class="work__media"><span class="work__badge">Ristorazione</span><span class="work__logo"><img src="https://giraffaconsulting.it/clients/miola.png" alt="Osteria Miola" /></span></div>
+        <div class="work__body">
+          <div class="work__meta"><span>Osteria Miola</span><span>Verona</span></div>
+          <h3>Brand identity dalla nascita</h3>
+          <div class="work__tags"><span>Brand</span><span>Strategia</span></div>
+        </div>
+      </a>
+      <a class="work reveal d2" data-cat="marketing" href="/al-calmiere">
+        <div class="work__media"><span class="work__badge">Ristorazione</span><span class="work__logo"><img src="https://giraffaconsulting.it/clients/al-calmiere.svg" alt="Al Calmiere" /></span></div>
+        <div class="work__body">
+          <div class="work__meta"><span>Al Calmiere</span><span>Verona</span></div>
+          <h3>Menu &amp; materiali curati</h3>
+          <div class="work__tags"><span>Marketing</span><span>Brand</span></div>
+        </div>
+      </a>
+      <a class="work reveal" data-cat="marketing digitale" href="/la-staffa">
+        <div class="work__media"><span class="work__badge">Food / Pizzeria</span><span class="work__logo"><img src="/logolastaffa.png" alt="La Staffa" /></span></div>
+        <div class="work__body">
+          <div class="work__meta"><span>La Staffa</span><span>Pizzeria</span></div>
+          <h3>Comunicazione, marketing &amp; nuovo sito</h3>
+          <div class="work__tags"><span>Marketing</span><span>Digitale</span></div>
+        </div>
+      </a>
+    </div>
+    <p class="muted reveal" style="margin-top:clamp(24px,4vw,40px);font-size:.95rem">Clicca su un progetto per aprirne la storia, passo dopo passo, con i materiali.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta-band bg-ink">
+  <span class="orb orb-1"></span><span class="orb orb-2"></span>
+  <div class="wrap">
+    <p class="eyebrow reveal">Il prossimo progetto</p>
+    <h2 class="h2 splitw">Potrebbe essere il tuo.</h2>
+    <p class="lead reveal d2" style="max-width:48ch">Raccontaci dove sei e dove vuoi arrivare: capiamo insieme se possiamo essere il partner giusto.</p>
+    <div class="reveal d3"><a class="btn btn-primary" href="/contatti">Prenota una call <span class="arr">→</span></a></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="/"><img class="logo-img-foot" src="/logo-horizontal-light.png" alt="Giraffa Consulting" /></a>
+        <p>Consulenza con visione. Strategia che diventa operatività.</p>
+        <a class="ig" href="https://www.instagram.com/giraffa.consulting/">@giraffa.consulting</a>
+      </div>
+      <div class="footer__col"><h4>Azienda</h4><a href="/chi-siamo">Chi Siamo</a><a href="/servizi">Servizi</a><a href="/portfolio">Portfolio</a><a href="/contatti">Contattaci</a></div>
+      <div class="footer__col"><h4>Servizi</h4><a href="/servizi#strategia">Strategia &amp; Posizionamento</a><a href="/servizi#marketing">Marketing &amp; Comunicazione</a><a href="/servizi#organizzazione">Organizzazione &amp; Processi</a><a href="/servizi#digitale">Digitale &amp; Automazioni</a></div>
+      <div class="footer__col"><h4>Contatti</h4><a href="/contatti">Prenota una call</a><a href="https://giraffaconsulting.it/backoffice">Accesso Gestionale</a></div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Giraffa Consulting di Ugrcic Nicola · Via San Procolo 5, 37123 Verona · P.IVA 04810390239</span>
+      <span class="links"><a href="/privacy-policy">Privacy Policy</a><a href="/cookie-policy">Cookie Policy</a></span>
+    </div>
+  </div>
+</footer>
+<script src="/app.js"></script>
+</body>
+</html>

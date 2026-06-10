@@ -513,6 +513,18 @@ body.has-cursor a,body.has-cursor button{ cursor:none; }
 .proj-block{ margin-top:22px; }
 .proj-block .subh{ color:var(--terra); }
 .proj-block p{ color:var(--txt-soft); }
+
+/* ---------- Il percorso (racconto a tappe) ---------- */
+.journey-head .h2{ max-width:20ch; }
+.journey{ margin-top:clamp(28px,4vw,56px); }
+.jstep{ display:grid; grid-template-columns:auto 1fr; gap:clamp(20px,4vw,60px); padding:clamp(26px,3.4vw,48px) 0; border-top:1px solid var(--line); align-items:start; }
+.jstep:last-child{ border-bottom:1px solid var(--line); }
+.jstep__n{ font-family:var(--ff-display); font-weight:500; font-size:clamp(2rem,5vw,3.6rem); line-height:.85; color:var(--terra); transition:transform .45s var(--ease-out); }
+.jstep:hover .jstep__n{ transform:translateX(6px); }
+.jstep__b h3{ font-family:var(--ff-display); font-weight:500; font-size:clamp(1.25rem,2.6vw,2rem); line-height:1.1; letter-spacing:-.01em; color:var(--ink); margin-bottom:12px; }
+.jstep__b p{ max-width:64ch; color:var(--txt-soft); }
+.jstep__meta{ display:inline-block; margin-top:14px; font-size:.72rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--terra-deep); }
+@media(max-width:640px){ .jstep{ grid-template-columns:1fr; gap:8px; } .jstep__n{ font-size:2.2rem; } }
 .proj-facts{ display:grid; gap:0; border-top:1px solid var(--line); }
 .proj-facts .f{ display:grid; grid-template-columns:auto 1fr; gap:16px; padding:14px 0; border-bottom:1px solid var(--line); font-size:.95rem; }
 .proj-facts .f .k{ font-family:var(--ff-body); font-weight:600; color:var(--ink); min-width:9ch; }
