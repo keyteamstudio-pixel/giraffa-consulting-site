@@ -216,7 +216,7 @@
       var body = encodeURIComponent(
         "Nome: " + (d.get("nome") || "") + "\n" + "Email: " + (d.get("email") || "") + "\n" +
         "Azienda: " + (d.get("azienda") || "") + "\n\n" + (d.get("messaggio") || ""));
-      window.location.href = "mailto:info@giraffaconsulting.it?subject=" + subj + "&body=" + body;
+      window.location.href = "mailto:ciao@giraffaconsulting.it?subject=" + subj + "&body=" + body;
     });
   }
 
