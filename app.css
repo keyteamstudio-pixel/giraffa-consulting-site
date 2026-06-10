@@ -530,13 +530,24 @@ body.has-cursor a,body.has-cursor button{ cursor:none; }
 .proj-facts .f .k{ font-family:var(--ff-body); font-weight:600; color:var(--ink); min-width:9ch; }
 .proj-facts .f .v{ color:var(--txt-soft); }
 
-.gallery{ display:grid; gap:14px; grid-template-columns:1fr; }
-@media(min-width:620px){ .gallery{ grid-template-columns:1fr 1fr; } }
-.gallery .g{ border-radius:var(--radius); overflow:hidden; background:linear-gradient(135deg,var(--sand),var(--cream)); aspect-ratio:4/3; display:flex; align-items:center; justify-content:center; border:1px solid var(--line); }
-.gallery .g.wide{ grid-column:1/-1; aspect-ratio:16/9; }
-.gallery .g img{ width:100%; height:100%; object-fit:cover; transition:transform .8s var(--ease-out); }
-.gallery .g:hover img{ transform:scale(1.04); }
-.gallery .g .ph{ font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--txt-soft); opacity:.55; }
+/* moodboard editoriale */
+.gallery{ display:grid; gap:clamp(12px,1.4vw,18px); grid-template-columns:repeat(2,1fr); }
+@media(min-width:760px){ .gallery{ grid-template-columns:repeat(6,1fr); } }
+.gallery .g{ position:relative; margin:0; grid-column:span 1; aspect-ratio:4/5; border-radius:16px; overflow:hidden; border:1px solid var(--line); background:var(--card); box-shadow:0 26px 56px -38px rgba(26,19,13,.55); }
+.gallery .g.wide{ grid-column:1/-1; aspect-ratio:16/10; }
+@media(min-width:760px){
+  .gallery .g{ grid-column:span 3; }
+  .gallery .g.s2{ grid-column:span 2; }
+  .gallery .g.s4{ grid-column:span 4; }
+  .gallery .g.wide{ grid-column:span 6; aspect-ratio:16/9; }
+}
+.gallery .g img{ width:100%; height:100%; object-fit:cover; object-position:center; transition:transform .9s var(--ease-out); }
+.gallery .g.contain{ background:radial-gradient(120% 100% at 50% 32%,var(--card),var(--sand)); }
+.gallery .g.contain img{ object-fit:contain; padding:13%; }
+.gallery .g:hover img{ transform:scale(1.045); }
+.gallery .g figcaption{ position:absolute; inset:auto 0 0 0; padding:36px 16px 14px; font-family:var(--ff-body); font-weight:500; font-size:.74rem; letter-spacing:.04em; color:#fff; background:linear-gradient(transparent,rgba(20,16,10,.74)); opacity:0; transform:translateY(8px); transition:opacity .4s,transform .4s var(--ease-out); pointer-events:none; }
+.gallery .g:hover figcaption{ opacity:1; transform:none; }
+.gallery .g .ph{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; text-align:center; padding:10%; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--txt-soft); opacity:.6; background:linear-gradient(135deg,var(--sand),var(--cream)); }
 
 /* =========================================================
    WOW HERO — muro immagini 3D in movimento
