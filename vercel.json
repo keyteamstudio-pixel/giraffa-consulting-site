@@ -3,7 +3,9 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/lavori", "destination": "/portfolio", "permanent": true }
+    { "source": "/lavori", "destination": "/portfolio", "permanent": true },
+    { "source": "/backoffice", "destination": "https://v0-giraffa-consulting.vercel.app/backoffice", "permanent": false },
+    { "source": "/backoffice/:path*", "destination": "https://v0-giraffa-consulting.vercel.app/backoffice/:path*", "permanent": false }
   ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
